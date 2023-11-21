@@ -1,0 +1,38 @@
+.additional_images_container {
+    position: relative;
+    width: 100%; /* Set the width as needed */
+    overflow: hidden;
+  }
+  
+  .additional_images {
+    display: flex;
+    transition: transform 0.3s ease; /* Add smooth transition for sliding effect */
+  }
+  
+  .additional-image {
+    margin-right: 10px;
+  }
+  
+  /* Style for active (visible) image in the carousel */
+  .additional-image.active {
+    border: 2px solid #f66b15; /* Highlight the active image with a border */
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carousel-arrow.left {
+    left: 0;
+  }
+  
+  .carousel-arrow.right {
+    right: 0;
+  }
+  

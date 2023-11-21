@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Reid - shop fullwidth</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <!-- Main Wrapper Start -->
+    <!--Offcanvas menu area start-->
+    <div class="off_canvars_overlay"></div>
+    <div class="offcanvas_menu">
+      <div class="container"></div>
+    </div>
+    <!--Offcanvas menu area end-->
+
+    <!--header area start-->
+    <header class="header_area header_shop">
+      <app-header></app-header>
+    </header>
+    <!--header area end-->
+
+    <!--breadcrumbs area start-->
+    <div class="breadcrumbs_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="breadcrumb_content">
+              <ul>
+                <li><a href="/">accueil</a></li>
+                <li>/</li>
+                <li>produit</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--breadcrumbs area end-->
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="search_bar">
+          <form (ngSubmit)="searchProduct()" #searchForm="ngForm">
+            <input [(ngModel)]="searchTerme" name="searchTerm" placeholder="Recherchez dans tout le magasin..." type="text" />
+            <button type="submit"><i class="ion-ios-search-strong"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--shop  area start-->
+    <div class="shop_area shop_fullwidth shop_reverse">
+      <div class="container">
+        <div class="shop_inner_area">
+          <div class="row">
+            <div class="col-12">
+              <!--shop toolbar start-->
+              <div class="shop_toolbar_wrapper">
+              
+                <div class="niceselect_option">
+              
+                  <form class="select_option" (change)="sortProducts()">
+                    <select name="orderby" id="short" [(ngModel)]="selectedSortOption">
+                      <option value="1">Trier par prix : du plus bas au plus élevé</option>
+                      <option value="2">Trier par prix : du plus élevé au plus bas</option>
+                      <option value="3">Nom du produit : par ordre alphabétique</option>
+                    </select>
+                  </form>
+
+
+          
+                </div>
+              
+                <div class="page_amount">
+                  <p>Montrer 16 de {{totalproduit}} produits</p>
+                </div>
+                
+              </div>
+        <!-- list prod--> 
+        <div class="row">
+          <div *ngFor="let produit of listproduit | paginate: { itemsPerPage: 10, currentPage: p }" class="col-lg-3">
+            <div class="single_product">
+              <div class="product_thumb">
+                <div class="modal_tab_img">
+
+                <div class="primary_img bordered-image" (click)="setPrimaryImage(produit.primaryImage, produit)">
+                  <img *ngIf="produit.primaryImage" style="width: 300px; height: 200px;" [src]="produit.primaryImage" />
+                </div>
+                <br>
+           
+             
+                <div class="double_base"></div>
+              </div>
+              </div>
+              <div class="product_content">
+                <h3><a href="product-details.html">{{ produit.nom }}</a></h3>
+                <span class="current_price">{{ produit.prix }} DT</span>
+              </div>
+              <div class="view__work">
+                <a (click)="openProduitDetail(produit)" data-quantity="1" rel="nofollow">Acheter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+               
+              </div>
+
+              <!--shop toolbar end-->
+            </div>
+          </div>
+
+          <!--shop tab product end-->
+          <div class="row">
+            <div class="col-12">
+              <!--shop toolbar start-->
+              <div class="shop_toolbar t_bottom">
+                <!-- Insérez le contenu généré par pagination-controls ici -->
+                <pagination-controls
+                  style="text-align: right"
+                  (pageChange)="p = $event"
+                ></pagination-controls>
+                <!-- Fin du contenu généré par pagination-controls -->
+              </div>
+
+              <!--shop toolbar end-->
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <app-footer></app-footer>
+    <!--footer area end-->
+
+
+  </body>
+
+</html>

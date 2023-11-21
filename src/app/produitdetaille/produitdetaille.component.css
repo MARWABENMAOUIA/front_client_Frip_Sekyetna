@@ -1,0 +1,28 @@
+.popup {
+    position: fixed;
+    top: 50%; /* Place the top of the modal at the vertical center */
+    left: 50%; /* Place the left of the modal at the horizontal center */
+    transform: translate(-50%, -50%); /* Center the modal exactly */
+    background-color:hsl(0, 20%, 99%); /* Change to your desired background color */
+    border: 2px solid #000; 
+    z-index: 1000; /* Ensure it's above other content */
+    /* Add other styles for width, height, box-shadow, etc. as needed */
+  }
+  .bordered-image {
+    border: 2px solid #f66b15; /* Vous pouvez personnaliser la couleur et l'épaisseur de la bordure selon vos besoins */
+  }
+  
+  /* Ajoutez une bordure à toutes les images à l'intérieur de la classe "additional_images" */
+  .additional_images img {
+    border: 1px solid #f66b15; /* Vous pouvez personnaliser la couleur et l'épaisseur de la bordure selon vos besoins */
+  }
+  .additional_images {
+    display: flex;
+    flex-wrap: nowrap; /* Évite le retour à la ligne automatique des éléments */
+    overflow-x: auto;  /* Ajoute une barre de défilement horizontale si nécessaire */
+  }
+  
+  .additional-image {
+    margin-right: 10px; /* Espacement entre les images (ajustez selon vos besoins) */
+  }
+  

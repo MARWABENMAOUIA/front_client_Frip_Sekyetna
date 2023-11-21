@@ -1,0 +1,107 @@
+
+<app-header></app-header>
+<hr>
+<!-- Zone des miettes de pain commence -->
+<div class="breadcrumbs_area other_bread">
+	<div class="container">   
+		<div class="row">
+			<div class="col-12">
+				<div class="breadcrumb_content">
+					<ul>
+						<li><a href="/">accueil</a></li>
+						<li>/</li>
+						<li>nous contacter</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>         
+</div>
+<!-- Zone des miettes de pain se termine -->
+
+
+<!-- Zone de contact commence -->
+<div class="contact_area">
+	<div class="container">   
+		<div dans="row">
+			<div class="col-lg-6 col-md-12">
+			   <div class="contact_message content">
+					<h3>Nous contacter</h3>    
+					 <p>	Chez Frip Sekyetna, notre mission est de vous offrir une expérience de shopping en ligne exceptionnelle, en vous proposant des produits de qualité, un service client de premier ordre et une passion pour le sport qui nous unit. Rejoignez notre communauté de fans dévoués et habillez-vous avec fierté. Laissez-nous être votre destination incontournable pour tout ce qui concerne le sport et les articles authentiques.</p>
+					<ul>
+						<li><i class="fa fa-fax"></i>  Adresse : 
+							Sakiet eddaire, Sfax, Tunisia
+							
+						</li>
+						<li><i class="fa fa-phone"></i> <a href="#">+216 27 715 933</a></li>
+						
+					</ul>             
+				</div> 
+			</div>
+			<div class="col-lg-6 col-md-12">
+			   <div class="contact_message form">
+					<h3>Dites-nous à propos de votre pensée
+						
+					</h3>   
+			
+					<form class="elementor-form" method="post" name="New Form" [formGroup]="ContactForm" (ngSubmit)="addNewContact()">
+						<input type="hidden" name="post_id" value="146"/>
+						<input type="hidden" name="form_id" value="8e50679"/>
+						<input type="hidden" name="referer_title" value="Contact us" />
+			
+										<input type="hidden" name="queried_id" value="146"/>
+						
+						<div class="elementor-form-fields-wrapper elementor-labels-above">
+											<div>
+															<label for="form-field-name" class="elementor-field-label">
+											Nom							</label>
+																	<input size="1"  formControlName="nom" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Nom">
+														</div>
+											<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_d496d5d elementor-col-50">
+															<label for="form-field-field_d496d5d" class="elementor-field-label">
+											Prenom							</label>
+											<input size="1" type="tel" formControlName="prenom" name="form_fields[field_d496d5d]" id="form-field-field_d496d5d" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Prenom" pattern="[0-9()#&amp;+*-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted.">
+			
+									</div>
+											<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+															<label for="form-field-email" class="elementor-field-label">
+											Sujet						</label>
+																	<input size="1" formControlName="sujet" type="text" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Sujet" required="required" aria-required="true">
+														</div>
+														<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+															<label for="form-field-email" class="elementor-field-label">
+											Télephone						</label>
+																	<input size="1" formControlName="tel" type="number" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="télephone" required="required" aria-required="true">
+														</div>
+											<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-field_e3827e3 elementor-col-100 elementor-field-required">
+															<label for="form-field-field_e3827e3" class="elementor-field-label">
+											Email							</label>
+																	<input size="1" formControlName="email" type="email" name="form_fields[field_e3827e3]" id="form-field-field_e3827e3" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Email" required="required" aria-required="true">
+														</div>
+											<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+															<label for="form-field-message" class="elementor-field-label">
+											Message							</label>
+									<textarea class="elementor-field-textual elementor-field  elementor-size-md"  formControlName="msg"name="form_fields[message]" id="form-field-message" rows="4" placeholder="Message"></textarea>				</div>
+											<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+								<button type="submit" class="elementor-button elementor-size-md">
+									<span >
+																		<span class="elementor-align-icon-left elementor-button-icon">
+												<i aria-hidden="true" class="far fa-envelope"></i>																	</span>
+																									<span class="elementor-button-text">
+																										Envoyer le message</span>  <span style="text-align: left;" [innerHTML]="this.messagecontact">
+                          
+
+																										</span>
+																</span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div> 
+			</div>
+		</div>
+	</div>    
+</div>
+<!-- Zone de contact se termine -->
+<hr>
+<app-footer></app-footer>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/reid/reid/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Oct 2023 09:38:43 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Reid – Fashion eCommerce HTML Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/assets/img/favicon.ico">
+
+
+</head>
+
+<body>
+
+
+ 
+    
+
+	<app-header></app-header>
+    <!--slider area start-->
+    <div class="slider_area slider_style owl-carousel">
+         <div class="single_slider" data-bgimg="assets/assets/img/slider/couvert2.png">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!--slider area end-->
+       <!--shiping area start-->
+       <div class="shipping_area">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-2 text-center">
+                <img src="assets/assets/img/about/pull.jpg" alt="" class="img-small">
+                  <div class="shipping_content">
+                    <h5>Pull</h5>
+                  </div>  
+                </div>
+              
+                <div class="col-lg-2 text-center">
+                  <img src="assets/assets/img/about/casquet.png" alt="" class="img-small">
+                  <div class="shipping_content">
+                    <h5>Casquette</h5>
+                  </div>  
+                </div>
+              
+                <div class="col-lg-2 text-center">
+                <img src="assets/assets/img/about/hoodi.png" alt="" class="img-small">
+                  <div class="shipping_content">
+                    <h5>Hoodie</h5>
+                  </div>  
+                </div>
+                
+                <div class="col-lg-2 text-center">
+                  <img src="assets/assets/img/about/vest.jpg" alt="" class="img-small">
+                  <div class="shipping_content">
+                    <h5>Vest</h5>
+                  </div>  
+                </div>
+              </div>
+              
+           
+            
+            </div>
+        
+    </div>
+    <br><br>
+    <!--shiping area end-->
+ 
+       <!--banner area start-->
+	   <section class="banner_section banner_section_two">
+        <div class="container">
+            <div class="row ">
+               <div class="col-lg-6 col-md-6">
+                    <div class="banner_area">
+                        <div class="banner_thumb">
+                            <a href="shop.html"><img src="assets/assets/img/bg/ronaldo1.jpg" alt="#"></a>
+                            <div class="banner_content">
+                               <!-- <h1>maillots de football</h1> -->
+                               <p>Grande promotion sur les articles en solde. Saisissez l'instant !</p>
+                                 <a href="/produit">Découvrez maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="banner_area">
+                        <div class="banner_thumb">
+                            <a href="shop.html"><img src="assets/assets/img/bg/banner9.jpg" alt="#" ></a>
+                            <div class="banner_content">
+                               <!-- <h1>Men’s</h1> -->
+                               <!-- <p>Grande promotion sur les articles en solde. Saisissez l'instant !</p>
+                               <a href="/produit">Découvrez maintenant</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--banner area end-->
+    
+ 
+    <br> <br> <br>
+    <!--product section area start-->
+    <section class="product_section womens_product">
+        <div class="container">
+            <div class="row">   
+                <div class="col-12">
+                   <div class="section_title">
+                       <h2>Dernier arrivage</h2>
+                       <p>Portez la passion du football international avec style. Découvrez notre collection de vêtements aux couleurs des équipes et montrez votre soutien sur et en dehors du terrain</p>
+                   </div>
+                </div> 
+            </div>    
+            <div class="product_area"> 
+               
+					   
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-12" *ngFor="let produit of topFiveproduit">
+							<div class="single_product">
+								<div class="product_thumb">
+									
+                                  
+                                      <div class="primary_img bordered-image">
+                                        <a href="/produit">
+                                        <img *ngIf="produit.primaryImage" style="width: 300px; height: 200px;" [src]="produit.primaryImage" /></a>
+                                      </div>
+									<div class="product_content grid_content">
+									
+                                        <h3>{{ produit.nom }}</h3>
+                                        <h3>{{ produit.descript }}</h3>
+										<span class="current_price">{{ produit.prix }}DT</span>
+									
+									
+										
+									</div>
+                                    <div class="label_product">
+                                        <span>new</span>
+                                    </div>
+								  
+
+							  
+								  
+			
+								
+								</div>
+							 
+								
+							
+
+							   
+							</div>
+							
+
+							
+				
+							
+						</div>
+					</div>
+            </div>
+               
+        </div>
+    </section>
+    <!--product section area end-->
+    
+
+   <hr>
+  
+ 
+
+    
+  <app-footer></app-footer>
+    <!-- modal area start-->
+ 
+    <!-- modal area start-->
+    
+    <div class="newletter-popup">
+        <div id="boxes" class="newletter-container">
+            <div id="dialog" class="window">
+                <div id="popup2">
+                    <span class="b-close"><span>close</span></span>
+                </div>
+                <div class="box">
+                    <div class="newletter-title">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <div class="box-content newleter-content">
+                        <label class="newletter-label">Enter your email address to subscribe our notification of our new post &amp; features by email.</label>
+                        <div id="frm_subscribe">
+                            <form name="subscribe" id="subscribe_popup">
+                                    <!-- <span class="required">*</span><span>Enter you email address here...</span>-->
+                                    <input type="text" value="" name="subscribe_pemail" id="subscribe_pemail" placeholder="Enter you email address here...">
+                                    <input type="hidden" value="" name="subscribe_pname" id="subscribe_pname">
+                                    <div id="notification"></div>
+                                    <a class="theme-btn-outlined" onclick="email_subscribepopup()"><span>Subscribe</span></a>
+                            </form>
+                            <div class="subscribe-bottom">
+                                <input type="checkbox" id="newsletter_popup_dont_show_again">
+                                <label for="newsletter_popup_dont_show_again">Don't show this popup again</label>
+                            </div>
+                        </div>
+                        <!-- /#frm_subscribe -->
+                    </div>
+                    <!-- /.box-content -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<!-- JS
+============================================ -->
+
+
+
+
+</body>
+
+
+<!-- Mirrored from htmldemo.net/reid/reid/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Oct 2023 09:39:13 GMT -->
+</html>

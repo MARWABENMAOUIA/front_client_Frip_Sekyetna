@@ -1,0 +1,90 @@
+<div class="popup">
+  <!-- Your modal content here -->
+
+  <div tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" (click)="close()" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <div class="modal_body">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="modal_tab">
+                  <div class="tab-content product-details-large">
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                      <div class="modal_tab_img">
+                        <div class="primary_img bordered-image" (click)="setPrimaryImage(data.primaryImage,data)">
+                          <img *ngIf="data.primaryImage" style="width: 300px; height: 200px;" [src]="data.primaryImage" />
+                        </div>
+                        <br>
+                        <div class="additional_images" *ngIf="data.images.length > 1">
+                          <div class="additional-image" *ngFor="let image of data.images.slice(1)" (click)="setPrimaryImage(image, data)">
+                            <img style="width: 130px; height: 100px;" [src]="image" />
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal_tab_button"></div>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-7 col-sm-12">
+                <div class="modal_right">
+                  <div class="modal_title mb-10">
+                    <h2>{{ data.nom }}</h2>
+                  </div>
+                  <div class="modal_price mb-10">
+                    <span class="new_price">{{ data.prix }} DT</span>
+                    <!-- <span class="old_price">$78.99</span> -->
+                  </div>
+                  <div class="modal_description mb-15">
+                    <p>{{ data.descript }}</p>
+                  </div>
+                  <p>Frais livraison 8 DT</p>
+
+                  <div class="checkout_form">
+                    <form [formGroup]="achatForm" (ngSubmit)="addNewachat()">
+                      <h3>INFORMATIONS PERSONNELLES</h3>
+                      <div class="row">
+                        <div class="col-lg-6 mb-20">
+                          <label>Prénom<span>*</span></label>
+                          <input formControlName="prenom" />
+                        </div>
+                        <div class="col-lg-6 mb-20">
+                          <label>Nom<span>*</span></label>
+                          <input formControlName="nom" />
+                        </div>
+
+                        <div class="col-12 mb-20">
+                          <label>Adresse<span>*</span></label>
+                          <input formControlName="adresse" />
+                        </div>
+                     
+                        <div class="col-lg-6 mb-20">
+                          <label>Téléphone<span>*</span></label>
+                          <input formControlName="tel" />
+                        </div>
+                      </div>
+                  
+                      <div class="view__work">
+                        <a (click)="addNewachat() " data-quantity="1" rel="nofollow">Valider l'achat</a>
+                      </div>
+                      <span style="text-align: left;" [innerHTML]="this.messageachat">
+                          
+
+                      </span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
